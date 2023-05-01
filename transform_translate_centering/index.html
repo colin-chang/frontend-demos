@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位元素居中</title>
+    <style>
+        .father {
+            position: relative;
+    
+            margin: 0 auto;
+            width: 600px;
+            height: 450px;
+            background-color: pink;
+        }
+    
+        .son {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+    
+            /* 通过边距计算 实现绝对定位元素居中
+            margin-left: -100px;
+            margin-top: -75px; */
+    
+            /*通过位移 快速实现绝对定位元素居中*/
+            transform: translate(-50%, -50%);
+    
+            width: 200px;
+            height: 150px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+</body>
+</html>
