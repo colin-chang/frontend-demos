@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多重转换-轮胎滚动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 740px;
+            height: 180px;
+        }
+        .container img{
+            height: 180px;
+            transition: all .6s;
+        }
+        .container:hover img{
+            /* 旋转会改变网页元素的坐标轴向，先写旋转，则后面的转换效果的轴向以旋转后的轴向为准，会影响转换结果，所以一般会将旋转放在最后 */
+            transform: translate(560px) rotate(356.5deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./images/tyre.png">
+    </div>
+</body>
+
+</html>
