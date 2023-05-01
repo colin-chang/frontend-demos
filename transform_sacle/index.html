@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和平精英缩放效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            width: 300px;
+        }
+
+        .picture {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .picture img {
+            display: block;
+            width: 300px;
+        }
+
+        .picture::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(5);
+            transition: all .3s;
+
+            content: '';
+            width: 58px;
+            height: 58px;
+            background-image: url(./images/play.png);
+            opacity: 0;
+        }
+
+        .game:hover .picture::after {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="game">
+            <div class="picture"><img src="./images/party.jpg"></div>
+            <h3>【和平精英】“初火”音乐概念片：四圣觉醒......</h3>
+        </li>
+    </ul>
+</body>
+
+</html>
