@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间旋转</title>
+</head>
+<style>
+    div {
+        transform-style: preserve-3d;
+    }
+
+    img {
+        margin-top: 50px;
+        margin-right: 20px;
+        width: 200px;
+        transition: all .5s;
+    }
+
+    div:hover .x {
+        transform: rotateX(60deg);
+    }
+
+    div:hover .y {
+        transform: rotateY(60deg);
+    }
+
+    div:hover .z {
+        transform: rotateZ(60deg);
+    }
+</style>
+
+<body>
+    <div>
+        <img class="x" src="./images/hero.jpeg">
+        <img class="y" src="./images/hero.jpeg">
+        <img class="z" src="./images/hero.jpeg">
+    </div>
+</body>
+
+</html>
