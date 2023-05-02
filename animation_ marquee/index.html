@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑马灯</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 5px solid skyblue;
+            width: 600px;
+            height: 112.5px;
+            overflow: hidden;
+        }
+
+        .container:hover ul {
+            animation-play-state: paused;
+        }
+
+        ul {
+            list-style: none;
+            width: 2000px;
+            animation: marquee 5s infinite linear;
+        }
+
+        .container li {
+            float: left;
+        }
+
+        .container img {
+            width: 200px;
+        }
+
+        @keyframes marquee {
+            to {
+                transform: translate(-1400px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li><img src="./images/1.jpg" alt="" /></li>
+            <li><img src="./images/2.jpg" alt="" /></li>
+            <li><img src="./images/3.jpg" alt="" /></li>
+            <li><img src="./images/4.jpg" alt="" /></li>
+            <li><img src="./images/5.jpg" alt="" /></li>
+            <li><img src="./images/6.jpg" alt="" /></li>
+            <li><img src="./images/7.jpg" alt="" /></li>
+
+            <!-- 第567移动的时候,显示区域不能留白 -->
+            <li><img src="./images/1.jpg" alt="" /></li>
+            <li><img src="./images/2.jpg" alt="" /></li>
+            <li><img src="./images/3.jpg" alt="" /></li>
+        </ul>
+    </div>
+</body>
+
+</html>
