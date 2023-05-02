@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景渐变-高光效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+        }
+
+        .ball {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: radial-gradient(
+                    /* 75+30两条渐变半径都从盒子中心点向外镜像渐变 */
+                    75px 30px at center center,
+                    blue,
+                    skyblue);
+        }
+
+        button {
+            float: left;
+            display: block;
+            margin: 10px 15px;
+            border: 0;
+            border-radius: 5px;
+            width: 120px;
+            height: 40px;
+            background-color:olivedrab;
+            color: white;
+        }
+
+        .btn_linear {
+            background-image: linear-gradient(to right,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
+        }
+
+        .btn_radial {
+            background-image: radial-gradient(70px at 10px 10px,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <button>普通按钮</button>
+        <button class="btn_linear">线性高光</button>
+        <button class="btn_radial">径向高光</button>
+    </div>
+</body>
+
+</html>
