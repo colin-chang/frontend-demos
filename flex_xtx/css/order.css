@@ -1,0 +1,104 @@
+body {
+    background-color: #f7f7f8;
+}
+
+.text-danger {
+    color: #cf4444;
+}
+
+.main {
+    padding: 12px 12px 80px;
+}
+
+.pannel {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 11px;
+}
+
+.user-info .location {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: linear-gradient(90deg,
+            #6fc2aa 5%,
+            #54b196 100%);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.user-info .user{
+    flex: 1;
+}
+
+.user-info .user .contact {
+    display: flex;
+}
+
+.user-info .user .contact h5 {
+    width: 55px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.user-info .user .contact p {
+    font-size: 13px;
+}
+
+.user-info .user .address {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.user-info .edit {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: #808080;
+}
+
+.payment {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #ededed;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.payment .money {
+    font-size: 12px;
+}
+
+.payment .money i {
+    font-size: 20px;
+}
+
+.payment .pay a {
+    display: block;
+    width: 91px;
+    height: 35px;
+    background-image: linear-gradient(90deg,
+            #6fc2aa 5%,
+            #54b196 100%);
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    font-family: MicrosoftYaHei;
+    font-size: 13px;
+    color: #fff;
+}
