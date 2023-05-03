@@ -65,6 +65,62 @@ body {
     color: #808080;
 }
 
+.goods {
+    display: flex;
+    padding: 11px 0 11px 11px;
+}
+
+.goods .pic {
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+}
+
+.goods .info {
+    flex: 1;
+}
+
+.goods .info h5 {
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+}
+
+.goods .info p {
+    width: 95px;
+    height: 20px;
+    margin: 5px 0;
+    background-color: #f7f7f8;
+    font-size: 12px;
+    color: #888;
+}
+
+.goods .info p span:first-child {
+    margin-right: 5px;
+}
+
+.goods .info .price {
+    font-size: 12px;
+}
+
+.goods .info .price i {
+    font-size: 16px;
+}
+
+.goods .info .price span:last-child {
+    margin-left: 5px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.goods .count {
+    width: 44px;
+    height: 44px;
+    /* background-color: pink; */
+    text-align: center;
+    line-height: 44px;
+}
+
 .payment {
     position: fixed;
     bottom: 0;
