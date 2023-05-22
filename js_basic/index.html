@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js基础</title>
+    <style>
+        div {
+            width: 300px;
+            height: 3000px;
+            background-color: olive;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        当一个父元素中有很多子元素，需要为每一个子元素分别注册事件时，因为时间冒泡的原因，子元素的事件会自动冒泡到父元素同名事件中，我们可以直接将事件注册给父元素，然后在父元素的事件对象中通过其target属性获得真正触发事件的元素，这称之为事件委托。
+        当一个父元素中有很多子元素，需要为每一个子元素分别注册事件时，因为时间冒泡的原因，子元素的事件会自动冒泡到父元素同名事件中，我们可以直接将事件注册给父元素，然后在父元素的事件对象中通过其target属性获得真正触发事件的元素，这称之为事件委托。
+        当一个父元素中有很多子元素，需要为每一个子元素分别注册事件时，因为时间冒泡的原因，子元素的事件会自动冒泡到父元素同名事件中，我们可以直接将事件注册给父元素，然后在父元素的事件对象中通过其target属性获得真正触发事件的元素，这称之为事件委托。
+        当一个父元素中有很多子元素，需要为每一个子元素分别注册事件时，因为时间冒泡的原因，子元素的事件会自动冒泡到父元素同名事件中，我们可以直接将事件注册给父元素，然后在父元素的事件对象中通过其target属性获得真正触发事件的元素，这称之为事件委托。
+        当一个父元素中有很多子元素，需要为每一个子元素分别注册事件时，因为时间冒泡的原因，子元素的事件会自动冒泡到父元素同名事件中，我们可以直接将事件注册给父元素，然后在父元素的事件对象中通过其target属性获得真正触发事件的元素，这称之为事件委托。
+    </div>
+    <script>
+        Date.prototype.pattern = function (fmt) {
+            const o = {
+                "M+": this.getMonth() + 1, //月份 
+                "d+": this.getDate(), //日 
+                "h+": this.getHours() % 12 == 0 ? 12 : this.getHours() % 12, //小时 
+                "H+": this.getHours(), //小时 
+                "m+": this.getMinutes(), //分 
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+                "S": this.getMilliseconds() //毫秒 
+            }
+            const week = { "0": "/u65e5", "1": "/u4e00", "2": "/u4e8c", "3": "/u4e09", "4": "/u56db", "5": "/u4e94", "6": "/u516d" }
+            if (/(y+)/.test(fmt)) {
+                fmt = fmt.replace(RegExp.$1, (this.getFullYear().toString()).substr(4 - RegExp.$1.length))
+            }
+            if (/(E+)/.test(fmt)) {
+                fmt = fmt.replace(RegExp.$1, ((RegExp.$1.length > 1) ? (RegExp.$1.length > 2 ? "/u661f/u671f" : "/u5468") : "") + week[this.getDay()])
+            }
+            for (var k in o) {
+                // if (new RegExp(`(${k})`).test(fmt)) {
+                if (new RegExp("(" + k + ")").test(fmt)) {
+                    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) :
+                        // ((`00${o[k]}`).substr(("" + o[k]).length)))
+                        (("00" + o[k]).substr(("" + o[k]).length)))
+                }
+            }
+            return fmt
+        }
+        const a= (new Date()).pattern("yyyy-MM-dd EE hh:mm:ss")
+        // console.log(a);
+        alert(a)
+    </script>
