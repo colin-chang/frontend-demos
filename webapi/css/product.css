@@ -3,12 +3,6 @@
   line-height: 1.4;
 }
 
-.xtx-wrapper .container {
-  width: 1240px;
-  margin: 0 auto;
-  padding: 20px 0 40px;
-}
-
 .xtx-product-info {
   background: #fff;
   display: flex;
@@ -16,8 +10,8 @@
 }
 
 .xtx-product-info .left {
-  width: 580px;
-  padding: 30px 50px;
+  width: 530px;
+  padding-right: 50px;
 }
 
 .xtx-product-info .left .pictrue {
@@ -123,7 +117,6 @@
 
 .xtx-product-info .right {
   width: 660px;
-  padding-top: 30px;
 }
 
 .xtx-product-info .right h3 {
